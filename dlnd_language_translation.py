@@ -395,16 +395,16 @@ tests.test_seq2seq_model(seq2seq_model)
 #%% Neural Network Training
 # Hyperparameters
 # Number of Epochs
-epochs = 10
+epochs = 5
 # Batch Size
-batch_size = 128*2
+batch_size = 128*4
 # RNN Size
-rnn_size = 256
+rnn_size = 128
 # Number of Layers
 num_layers = 1
 # Embedding Size
-encoding_embedding_size = 300
-decoding_embedding_size = 300
+encoding_embedding_size = 128
+decoding_embedding_size = 128
 # Learning Rate
 learning_rate = 5e-3
 # Dropout Keep Probability
