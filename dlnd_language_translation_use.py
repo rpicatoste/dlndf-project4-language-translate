@@ -32,8 +32,12 @@ tests.test_sentence_to_seq(sentence_to_seq)
 #%% Translate
 sentences = []
 sentences.append('he saw a old yellow truck .')
-sentences.append('the wonderful shark thinks the field is green and freezing')
-sentences.append('the strawberry was liked , but it is warm .')
+sentences.append('china is never nice during july , but it is usually snowy in spring .')
+sentences.append('paris is never nice during july , but it is usually warm in spring .')
+sentences.append('the lemon is my most loved fruit , but the strawberry is our most loved .')
+sentences.append('the shark is my most loved animal , but the cat is our most loved .')
+sentences.append('they dislike grapes , mangoes , and limes .')
+sentences.append('they dislike monkeys , mouse , and lion .')
 """
 DON'T MODIFY ANYTHING IN THIS CELL
 """

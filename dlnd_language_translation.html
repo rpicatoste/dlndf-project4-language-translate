@@ -11857,9 +11857,9 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Dataset Stats
-Roughly the number of unique words: 227
+Roughly the number of unique words: 202
 Number of sentences: 137861
-Average number of words in a sentence: 13.225277634719028
+Average number of words in a sentence: 13.283379636010185
 
 English sentences 0 to 10:
 new jersey is sometimes quiet during autumn , and it is snowy in april .
@@ -12671,13 +12671,13 @@ Default GPU Device: /gpu:0
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span><span class="o">*</span><span class="mi">4</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Number of Layers</span>
-<span class="n">num_layers</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num_layers</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1"># Embedding Size</span>
 <span class="n">encoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="n">decoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
@@ -12926,31 +12926,56 @@ Default GPU Device: /gpu:0
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch   50/269 - Train Accuracy: 0.4289, Validation Accuracy: 0.4709, Loss: 1.5343
-Epoch   0 Batch  100/269 - Train Accuracy: 0.5610, Validation Accuracy: 0.5519, Loss: 0.7721
-Epoch   0 Batch  150/269 - Train Accuracy: 0.6225, Validation Accuracy: 0.6236, Loss: 0.6105
-Epoch   0 Batch  200/269 - Train Accuracy: 0.6920, Validation Accuracy: 0.6943, Loss: 0.5057
-Epoch   0 Batch  250/269 - Train Accuracy: 0.7424, Validation Accuracy: 0.7397, Loss: 0.3912
-Epoch   1 Batch   50/269 - Train Accuracy: 0.7905, Validation Accuracy: 0.8137, Loss: 0.2817
-Epoch   1 Batch  100/269 - Train Accuracy: 0.8514, Validation Accuracy: 0.8406, Loss: 0.2015
-Epoch   1 Batch  150/269 - Train Accuracy: 0.8611, Validation Accuracy: 0.8537, Loss: 0.1627
-Epoch   1 Batch  200/269 - Train Accuracy: 0.8743, Validation Accuracy: 0.8730, Loss: 0.1355
-Epoch   1 Batch  250/269 - Train Accuracy: 0.8906, Validation Accuracy: 0.8974, Loss: 0.1089
-Epoch   2 Batch   50/269 - Train Accuracy: 0.8959, Validation Accuracy: 0.9039, Loss: 0.1024
-Epoch   2 Batch  100/269 - Train Accuracy: 0.9145, Validation Accuracy: 0.9132, Loss: 0.0793
-Epoch   2 Batch  150/269 - Train Accuracy: 0.9140, Validation Accuracy: 0.9134, Loss: 0.0722
-Epoch   2 Batch  200/269 - Train Accuracy: 0.9304, Validation Accuracy: 0.9272, Loss: 0.0657
-Epoch   2 Batch  250/269 - Train Accuracy: 0.9273, Validation Accuracy: 0.9248, Loss: 0.0610
-Epoch   3 Batch   50/269 - Train Accuracy: 0.9220, Validation Accuracy: 0.9280, Loss: 0.0606
-Epoch   3 Batch  100/269 - Train Accuracy: 0.9447, Validation Accuracy: 0.9414, Loss: 0.0511
-Epoch   3 Batch  150/269 - Train Accuracy: 0.9448, Validation Accuracy: 0.9354, Loss: 0.0468
-Epoch   3 Batch  200/269 - Train Accuracy: 0.9423, Validation Accuracy: 0.9426, Loss: 0.0433
-Epoch   3 Batch  250/269 - Train Accuracy: 0.9415, Validation Accuracy: 0.9414, Loss: 0.0448
-Epoch   4 Batch   50/269 - Train Accuracy: 0.9366, Validation Accuracy: 0.9427, Loss: 0.0454
-Epoch   4 Batch  100/269 - Train Accuracy: 0.9571, Validation Accuracy: 0.9550, Loss: 0.0394
-Epoch   4 Batch  150/269 - Train Accuracy: 0.9616, Validation Accuracy: 0.9533, Loss: 0.0359
-Epoch   4 Batch  200/269 - Train Accuracy: 0.9565, Validation Accuracy: 0.9478, Loss: 0.0357
-Epoch   4 Batch  250/269 - Train Accuracy: 0.9563, Validation Accuracy: 0.9476, Loss: 0.0355
+<pre>Epoch   0 Batch   50/269 - Train Accuracy: 0.4604, Validation Accuracy: 0.5078, Loss: 1.9591
+Epoch   0 Batch  100/269 - Train Accuracy: 0.5520, Validation Accuracy: 0.5477, Loss: 0.9168
+Epoch   0 Batch  150/269 - Train Accuracy: 0.6134, Validation Accuracy: 0.6178, Loss: 0.6838
+Epoch   0 Batch  200/269 - Train Accuracy: 0.6546, Validation Accuracy: 0.6700, Loss: 0.5766
+Epoch   0 Batch  250/269 - Train Accuracy: 0.6704, Validation Accuracy: 0.6756, Loss: 0.4960
+Epoch   1 Batch   50/269 - Train Accuracy: 0.6986, Validation Accuracy: 0.7195, Loss: 0.4024
+Epoch   1 Batch  100/269 - Train Accuracy: 0.7879, Validation Accuracy: 0.7615, Loss: 0.3000
+Epoch   1 Batch  150/269 - Train Accuracy: 0.8289, Validation Accuracy: 0.8134, Loss: 0.2142
+Epoch   1 Batch  200/269 - Train Accuracy: 0.8690, Validation Accuracy: 0.8596, Loss: 0.1498
+Epoch   1 Batch  250/269 - Train Accuracy: 0.9191, Validation Accuracy: 0.9022, Loss: 0.1093
+Epoch   2 Batch   50/269 - Train Accuracy: 0.9103, Validation Accuracy: 0.9147, Loss: 0.0854
+Epoch   2 Batch  100/269 - Train Accuracy: 0.9281, Validation Accuracy: 0.9167, Loss: 0.0677
+Epoch   2 Batch  150/269 - Train Accuracy: 0.9316, Validation Accuracy: 0.9363, Loss: 0.0558
+Epoch   2 Batch  200/269 - Train Accuracy: 0.9387, Validation Accuracy: 0.9299, Loss: 0.0479
+Epoch   2 Batch  250/269 - Train Accuracy: 0.9425, Validation Accuracy: 0.9417, Loss: 0.0497
+Epoch   3 Batch   50/269 - Train Accuracy: 0.9419, Validation Accuracy: 0.9546, Loss: 0.0490
+Epoch   3 Batch  100/269 - Train Accuracy: 0.9568, Validation Accuracy: 0.9528, Loss: 0.0411
+Epoch   3 Batch  150/269 - Train Accuracy: 0.9602, Validation Accuracy: 0.9603, Loss: 0.0358
+Epoch   3 Batch  200/269 - Train Accuracy: 0.9697, Validation Accuracy: 0.9616, Loss: 0.0301
+Epoch   3 Batch  250/269 - Train Accuracy: 0.9638, Validation Accuracy: 0.9660, Loss: 0.0330
+Epoch   4 Batch   50/269 - Train Accuracy: 0.9518, Validation Accuracy: 0.9638, Loss: 0.0373
+Epoch   4 Batch  100/269 - Train Accuracy: 0.9672, Validation Accuracy: 0.9730, Loss: 0.0284
+Epoch   4 Batch  150/269 - Train Accuracy: 0.9675, Validation Accuracy: 0.9680, Loss: 0.0270
+Epoch   4 Batch  200/269 - Train Accuracy: 0.9780, Validation Accuracy: 0.9718, Loss: 0.0212
+Epoch   4 Batch  250/269 - Train Accuracy: 0.9695, Validation Accuracy: 0.9711, Loss: 0.0260
+Epoch   5 Batch   50/269 - Train Accuracy: 0.9601, Validation Accuracy: 0.9741, Loss: 0.0309
+Epoch   5 Batch  100/269 - Train Accuracy: 0.9725, Validation Accuracy: 0.9676, Loss: 0.0244
+Epoch   5 Batch  150/269 - Train Accuracy: 0.9705, Validation Accuracy: 0.9750, Loss: 0.0256
+Epoch   5 Batch  200/269 - Train Accuracy: 0.9791, Validation Accuracy: 0.9710, Loss: 0.0161
+Epoch   5 Batch  250/269 - Train Accuracy: 0.9723, Validation Accuracy: 0.9764, Loss: 0.0230
+Epoch   6 Batch   50/269 - Train Accuracy: 0.9582, Validation Accuracy: 0.9838, Loss: 0.0255
+Epoch   6 Batch  100/269 - Train Accuracy: 0.9767, Validation Accuracy: 0.9728, Loss: 0.0190
+Epoch   6 Batch  150/269 - Train Accuracy: 0.9739, Validation Accuracy: 0.9750, Loss: 0.0197
+Epoch   6 Batch  200/269 - Train Accuracy: 0.9827, Validation Accuracy: 0.9733, Loss: 0.0152
+Epoch   6 Batch  250/269 - Train Accuracy: 0.9770, Validation Accuracy: 0.9768, Loss: 0.0179
+Epoch   7 Batch   50/269 - Train Accuracy: 0.9726, Validation Accuracy: 0.9761, Loss: 0.0232
+Epoch   7 Batch  100/269 - Train Accuracy: 0.9783, Validation Accuracy: 0.9714, Loss: 0.0154
+Epoch   7 Batch  150/269 - Train Accuracy: 0.9811, Validation Accuracy: 0.9765, Loss: 0.0194
+Epoch   7 Batch  200/269 - Train Accuracy: 0.9847, Validation Accuracy: 0.9736, Loss: 0.0136
+Epoch   7 Batch  250/269 - Train Accuracy: 0.9786, Validation Accuracy: 0.9784, Loss: 0.0152
+Epoch   8 Batch   50/269 - Train Accuracy: 0.9659, Validation Accuracy: 0.9793, Loss: 0.0195
+Epoch   8 Batch  100/269 - Train Accuracy: 0.9840, Validation Accuracy: 0.9734, Loss: 0.0160
+Epoch   8 Batch  150/269 - Train Accuracy: 0.9797, Validation Accuracy: 0.9805, Loss: 0.0164
+Epoch   8 Batch  200/269 - Train Accuracy: 0.9850, Validation Accuracy: 0.9751, Loss: 0.0131
+Epoch   8 Batch  250/269 - Train Accuracy: 0.9751, Validation Accuracy: 0.9814, Loss: 0.0164
+Epoch   9 Batch   50/269 - Train Accuracy: 0.9686, Validation Accuracy: 0.9799, Loss: 0.0195
+Epoch   9 Batch  100/269 - Train Accuracy: 0.9832, Validation Accuracy: 0.9713, Loss: 0.0125
+Epoch   9 Batch  150/269 - Train Accuracy: 0.9760, Validation Accuracy: 0.9803, Loss: 0.0169
+Epoch   9 Batch  200/269 - Train Accuracy: 0.9861, Validation Accuracy: 0.9766, Loss: 0.0118
+Epoch   9 Batch  250/269 - Train Accuracy: 0.9783, Validation Accuracy: 0.9738, Loss: 0.0149
 Model Trained and Saved
 </pre>
 </div>
@@ -13091,13 +13116,17 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;he saw a old yellow truck .&#39;</span><span class="p">)</span>
-<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;the wonderful shark thinks the field is green and freezing&#39;</span><span class="p">)</span>
-<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;the strawberry was liked , but it is warm .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;china is never nice during july , but it is usually snowy in spring .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;paris is never nice during july , but it is usually warm in spring .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;the lemon is my most loved fruit , but the strawberry is our most loved .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;the shark is my most loved animal , but the cat is our most loved .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;they dislike grapes , mangoes , and limes .&#39;</span><span class="p">)</span>
+<span class="n">sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;they dislike monkeys , mouse , and lion .&#39;</span><span class="p">)</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -13144,28 +13173,60 @@ Model Trained and Saved
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from checkpoints/dev
 Input
-  Word Ids:      [161, 184, 124, 60, 92, 117, 20]
+  Word Ids:      [109, 134, 149, 24, 11, 98, 86]
   English Words: [&#39;he&#39;, &#39;saw&#39;, &#39;a&#39;, &#39;old&#39;, &#39;yellow&#39;, &#39;truck&#39;, &#39;.&#39;]
 
 Prediction
-  Word Ids:      [261, 245, 82, 76, 189, 320, 243, 301, 1]
+  Word Ids:      [78, 229, 129, 145, 116, 241, 163, 44, 1]
   French Words: il a vu un vieux camion jaune . &lt;EOS&gt;
 INFO:tensorflow:Restoring parameters from checkpoints/dev
 Input
-  Word Ids:      [180, 145, 175, 186, 180, 61, 13, 11, 56, 129]
-  English Words: [&#39;the&#39;, &#39;wonderful&#39;, &#39;shark&#39;, &#39;thinks&#39;, &#39;the&#39;, &#39;field&#39;, &#39;is&#39;, &#39;green&#39;, &#39;and&#39;, &#39;freezing&#39;]
+  Word Ids:      [46, 201, 39, 117, 110, 126, 130, 115, 156, 201, 161, 178, 64, 62, 86]
+  English Words: [&#39;china&#39;, &#39;is&#39;, &#39;never&#39;, &#39;nice&#39;, &#39;during&#39;, &#39;july&#39;, &#39;,&#39;, &#39;but&#39;, &#39;it&#39;, &#39;is&#39;, &#39;usually&#39;, &#39;snowy&#39;, &#39;in&#39;, &#39;spring&#39;, &#39;.&#39;]
 
 Prediction
-  Word Ids:      [37, 211, 81, 65, 11, 37, 80, 345, 203, 261, 81, 233, 196, 267, 301, 1]
-  French Words: le citron est notre fruit le gel , mais il est occupé au printemps . &lt;EOS&gt;
+  Word Ids:      [151, 40, 161, 196, 70, 77, 215, 86, 78, 40, 295, 240, 192, 293, 44, 1]
+  French Words: chine est jamais agréable en juillet , mais il est généralement enneigée au printemps . &lt;EOS&gt;
 INFO:tensorflow:Restoring parameters from checkpoints/dev
 Input
-  Word Ids:      [180, 116, 125, 28, 167, 148, 151, 13, 219, 20]
-  English Words: [&#39;the&#39;, &#39;strawberry&#39;, &#39;was&#39;, &#39;liked&#39;, &#39;,&#39;, &#39;but&#39;, &#39;it&#39;, &#39;is&#39;, &#39;warm&#39;, &#39;.&#39;]
+  Word Ids:      [56, 201, 39, 117, 110, 126, 130, 115, 156, 201, 161, 75, 64, 62, 86]
+  English Words: [&#39;paris&#39;, &#39;is&#39;, &#39;never&#39;, &#39;nice&#39;, &#39;during&#39;, &#39;july&#39;, &#39;,&#39;, &#39;but&#39;, &#39;it&#39;, &#39;is&#39;, &#39;usually&#39;, &#39;warm&#39;, &#39;in&#39;, &#39;spring&#39;, &#39;.&#39;]
 
 Prediction
-  Word Ids:      [195, 91, 81, 142, 11, 56, 342, 301, 1]
-  French Words: la fraise est mon fruit en mars . &lt;EOS&gt;
+  Word Ids:      [182, 40, 161, 196, 70, 77, 215, 86, 78, 40, 295, 5, 192, 293, 44, 1]
+  French Words: paris est jamais agréable en juillet , mais il est généralement chaud au printemps . &lt;EOS&gt;
+INFO:tensorflow:Restoring parameters from checkpoints/dev
+Input
+  Word Ids:      [143, 191, 201, 159, 23, 104, 91, 130, 115, 143, 114, 201, 32, 23, 104, 86]
+  English Words: [&#39;the&#39;, &#39;lemon&#39;, &#39;is&#39;, &#39;my&#39;, &#39;most&#39;, &#39;loved&#39;, &#39;fruit&#39;, &#39;,&#39;, &#39;but&#39;, &#39;the&#39;, &#39;strawberry&#39;, &#39;is&#39;, &#39;our&#39;, &#39;most&#39;, &#39;loved&#39;, &#39;.&#39;]
+
+Prediction
+  Word Ids:      [324, 51, 40, 150, 205, 324, 236, 99, 215, 86, 281, 212, 40, 287, 236, 99, 44, 1]
+  French Words: le citron est mon fruit le plus aimé , mais la fraise est notre plus aimé . &lt;EOS&gt;
+INFO:tensorflow:Restoring parameters from checkpoints/dev
+Input
+  Word Ids:      [143, 70, 201, 159, 23, 104, 142, 130, 115, 143, 144, 201, 32, 23, 104, 86]
+  English Words: [&#39;the&#39;, &#39;shark&#39;, &#39;is&#39;, &#39;my&#39;, &#39;most&#39;, &#39;loved&#39;, &#39;animal&#39;, &#39;,&#39;, &#39;but&#39;, &#39;the&#39;, &#39;cat&#39;, &#39;is&#39;, &#39;our&#39;, &#39;most&#39;, &#39;loved&#39;, &#39;.&#39;]
+
+Prediction
+  Word Ids:      [324, 9, 40, 150, 205, 324, 236, 183, 215, 86, 324, 343, 40, 287, 236, 99, 44, 1]
+  French Words: le pamplemousse est mon fruit le plus cher , mais le raisin est notre plus aimé . &lt;EOS&gt;
+INFO:tensorflow:Restoring parameters from checkpoints/dev
+Input
+  Word Ids:      [77, 18, 158, 130, 180, 130, 163, 165, 86]
+  English Words: [&#39;they&#39;, &#39;dislike&#39;, &#39;grapes&#39;, &#39;,&#39;, &#39;mangoes&#39;, &#39;,&#39;, &#39;and&#39;, &#39;limes&#39;, &#39;.&#39;]
+
+Prediction
+  Word Ids:      [68, 225, 35, 190, 135, 215, 135, 171, 174, 80, 44, 1]
+  French Words: ils n&#39;aiment pas les mangues , mangues et citrons verts . &lt;EOS&gt;
+INFO:tensorflow:Restoring parameters from checkpoints/dev
+Input
+  Word Ids:      [77, 18, 128, 130, 122, 130, 163, 136, 86]
+  English Words: [&#39;they&#39;, &#39;dislike&#39;, &#39;monkeys&#39;, &#39;,&#39;, &#39;mouse&#39;, &#39;,&#39;, &#39;and&#39;, &#39;lion&#39;, &#39;.&#39;]
+
+Prediction
+  Word Ids:      [68, 225, 35, 190, 307, 69, 344, 215, 171, 78, 40, 108, 44, 1]
+  French Words: ils n&#39;aiment pas les mois de mars , et il est difficile . &lt;EOS&gt;
 </pre>
 </div>
 </div>
